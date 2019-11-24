@@ -4,16 +4,10 @@ import (
 	"fmt"
 	"log"
 	"net/http"
-
-	"github.com/google/uuid"
 )
 
 func handler(w http.ResponseWriter, r *http.Request) {
-
-	for i := 0; i < 2000000; i++ {
-		uuid.New()
-		fmt.Fprintf(w, "%d", i)
-	}
+	fmt.Fprintf(w, "hello world\n")
 
 }
 
